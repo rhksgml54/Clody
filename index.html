@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clody</title>
+    
+    <!-- 1. Tailwind CSS 라이브러리를 먼저 불러옵니다. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. 라이브러리가 로드된 후, 맞춤 디자인 설정을 적용합니다. -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // 앱의 주요 색상들을 정의합니다.
+              'clody-logo': '#FACC15', // 로고 및 하이라이트 노란색
+              'clody-main-text': '#111827', // 기본 텍스트 검은색
+              'clody-sub-text': '#4B5563', // 서브 텍스트 회색
+              'clody-bg': '#FFFFFF', // 기본 배경 흰색
+            }
+          }
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
+

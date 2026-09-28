@@ -1,0 +1,22 @@
+path: C:\Users\HOME\Desktop\Clody vr.2\polyvore_dataset\polyvore_outfits
+train: images  # 훈련용 이미지 폴더 (path 기준 상대 경로)
+val: images    # 검증용 이미지 폴더 (YOLOv8이 훈련 시 자동으로 분할합니다)
+
+
+nc: 13
+
+
+names:
+  - 'short_sleeve_top'
+  - 'long_sleeve_top'
+  - 'short_sleeve_outwear'
+  - 'long_sleeve_outwear'
+  - 'vest'
+  - 'sling'
+  - 'shorts'
+  - 'trousers'
+  - 'skirt'
+  - 'short_sleeve_dress'
+  - 'long_sleeve_dress'
+  - 'vest_dress'
+  - 'sling_dress'
