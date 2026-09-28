@@ -23,14 +23,5 @@ export default defineConfig({
         secure: false,
       },
     },
-
-    // ★★★ 네트워크/CPU 과부하 방지 — 무조건 유지! ★★★
-    watch: {
-      ignored: [
-        "**/runs/**",
-        "**/polyvore_dataset/**",
-        "**/.vscode/**",
-      ],
-    },
   },
 });

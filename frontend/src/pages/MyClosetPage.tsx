@@ -1,35 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import type { UserClothingItem } from '../types';
-
-/* ----------------------------
-  재사용 가능한 UI Components
------------------------------ */
-
-const InputField: React.FC<{ label: string; children: React.ReactNode }> = ({
-  label,
-  children,
-}) => (
-  <div>
-    <label className="block text-sm font-medium text-gray-600 mb-1">
-      {label}
-    </label>
-    {children}
-  </div>
-);
-
-const StyledInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
-  <input
-    {...props}
-    className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
-  />
-);
-
-const StyledSelect = (props: React.SelectHTMLAttributes<HTMLSelectElement>) => (
-  <select
-    {...props}
-    className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
-  />
-);
+import { InputField, StyledInput, StyledSelect } from '../components/ui/Form';
 
 /* -----------------------------------------
    대분류 → 중분류 매핑 테이블

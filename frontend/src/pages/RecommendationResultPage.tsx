@@ -1,4 +1,3 @@
-// src/components/RecommendationResultPage.tsx
 import React from "react";
 import type { PageData } from "../types";
 

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import json
 
 # =============================================================
 # ① UI → 서버용 TPO 변환 매핑
@@ -191,14 +190,10 @@ def generate_best_outfit(profile, closet_items, weather, tpo_ui):
 
 
 # =============================================================
-# ⑥ 결과 반환 (Gemini 제거)
+# ⑥ 결과 반환
 # =============================================================
-def get_gemini_recommendation(profile, closet_items, weather, tpo_ui):
-    """
-    🔥 Gemini 제거 버전
-    🔥 설명은 서버에서 자동 생성
-    🔥 score는 best["score"] 그대로 반환
-    """
+def recommend_outfit(profile, closet_items, weather, tpo_ui):
+    """최고 점수 조합과 자동 생성 설명, 점수를 반환"""
     try:
         best = generate_best_outfit(profile, closet_items, weather, tpo_ui)
 

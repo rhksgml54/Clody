@@ -1,12 +1,8 @@
-// ============================================
-//  MyPage.tsx — 완전 통합 버전 (오류 없음)
-//  - 퍼스널컬러 AI 분석
-//  - 점수 기반 체형 진단 (5문항)
-//  - 프로필 저장
-// ============================================
+// 마이페이지: 퍼스널컬러 AI 분석, 체형 진단 퀴즈, 프로필 저장
 
 import React, { useState, useEffect, useRef } from "react";
 import type { Profile } from "../types";
+import { InputField, StyledInput, StyledSelect } from "../components/ui/Form";
 
 type ScoreTable = {
   [bodyType: string]: number;
@@ -224,41 +220,6 @@ onComplete(finalLabel);
     </div>
   );
 };
-
-/* -------------------------------------------------
-     공통 UI 컴포넌트
----------------------------------------------------*/
-const InputField = ({
-  label,
-  description,
-  children,
-}: {
-  label: string;
-  description?: string;
-  children: React.ReactNode;
-}) => (
-  <div>
-    <label className="block text-sm font-medium text-gray-700 mb-1">
-      {label}
-    </label>
-    {children}
-    {description && <p className="text-xs text-gray-500 mt-1">{description}</p>}
-  </div>
-);
-
-const StyledInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
-  <input
-    {...props}
-    className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-yellow-400"
-  />
-);
-
-const StyledSelect = (props: React.SelectHTMLAttributes<HTMLSelectElement>) => (
-  <select
-    {...props}
-    className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-yellow-400"
-  />
-);
 
 /* -------------------------------------------------
      MyPage 본체

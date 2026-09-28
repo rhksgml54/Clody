@@ -1,13 +1,12 @@
-// src/App.tsx
 import React, { useState, useEffect } from "react";
 import { Header } from "./components/Header";
-import { HomePage } from "./components/HomePage";
-import { RecommendationResultPage } from "./components/RecommendationResultPage";
 import { SplashScreen } from "./components/SplashScreen";
-import { MyPage } from "./components/MyPage";
-import { MyClosetPage } from "./components/MyClosetPage";
-import { LoginPage } from "./components/LoginPage";
-import { RegisterPage } from "./components/RegisterPage";
+import { HomePage } from "./pages/HomePage";
+import { RecommendationResultPage } from "./pages/RecommendationResultPage";
+import { MyPage } from "./pages/MyPage";
+import { MyClosetPage } from "./pages/MyClosetPage";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
 import type { Profile, PageData, WeatherInfo, UserRecord } from "./types";
 
 const defaultProfile: Profile = {
@@ -46,15 +45,6 @@ function App() {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
-
-  const loadUsers = (): Record<string, UserRecord> => {
-    const data = localStorage.getItem("users");
-    return data ? JSON.parse(data) : {};
-  };
-
-  const saveUsers = (users: Record<string, UserRecord>) => {
-    localStorage.setItem("users", JSON.stringify(users));
-  };
 
   // -----------------------------
   // 로그인

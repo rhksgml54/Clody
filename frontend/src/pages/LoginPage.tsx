@@ -1,26 +1,10 @@
-// src/components/LoginPage.tsx
-
 import React, { useState } from 'react';
+import { InputField, StyledInput } from '../components/ui/Form';
 
 interface LoginPageProps {
   onLogin: (username: string, password: string) => Promise<boolean>;
-  onNavigate: (view: any) => void; 
+  onNavigate: (view: any) => void;
 }
-
-const InputField: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
-  <div>
-    <label className="block text-sm font-medium text-gray-600 mb-1">{label}</label>
-    {children}
-  </div>
-);
-
-const StyledInput = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
-  <input
-    {...props}
-    className="w-full bg-gray-100 border border-gray-300 rounded-md px-3 py-2 text-black
-               focus:outline-none focus:ring-2 focus:ring-yellow-400"
-  />
-);
 
 export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onNavigate }) => {
   const [username, setUsername] = useState('');

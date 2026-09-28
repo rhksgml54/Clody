@@ -1,14 +1,11 @@
-# personal_color_analyzer.py
-
-import google.generativeai as genai
-import PIL.Image
 import io
 import json
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+import google.generativeai as genai
+import PIL.Image
 
+# .env는 app/__init__.py에서 로드됨
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if GOOGLE_API_KEY:
